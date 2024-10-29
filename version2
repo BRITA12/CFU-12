@@ -1,0 +1,19 @@
+#Brithany
+#10/29/2024
+#CFU#12 Version 2 : Modify Version 1 so that the User gets only 3 chances. HINTS:  Use a variable to keep track of the number of guesses.The User is stuck in the While loop as long as num_guesses < 3 and guess != PW
+password = "Alaia47g"
+num_guesses = 0
+max_guesses = 3
+correct = False
+
+while num_guesses < max_guesses and not correct:
+    user_input = input("Enter the password: ")
+    if user_input == password:
+        print("Correct! You may enter...")
+        correct = True
+    else:
+        print("Wrong Password!")
+        num_guesses += 1
+
+if not correct:
+    print("Out of attempts!")
