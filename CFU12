@@ -1,0 +1,56 @@
+#10/30/24
+#1-2period
+#Brithanysanchez
+#cfu#12
+'''-Write a program that asks the user for the password.
+-The Password should initially be set to “simonsnyc”
+-It keeps asking them for the password until they get it correct.
+-For the incorrect password, it should say “Wrong Password!)
+-For correct password it should say “Correct! You may enter….”
+-And then it ends the program
+'''
+
+#version 1:
+def v1():
+    
+    password = "simonsnyc"
+    userInput = input("Enter password: ")
+
+    while password != userInput:
+         print("Wrong password!")
+         userInput = input("Enter password:")
+    
+    print("coreect! you may enter...")
+        
+#version 2:
+'''
+Modify Version 1 so that the User gets only 3 chances.
+HINTS:  Use a variable to keep track of the number of guesses.
+The User is stuck in the While loop as long as num_guesses < 3 and guess != PW
+'''
+def v2():
+    password = "simonsnyc"
+    userInput = input("Enter password: ")
+    i = 1
+    while password != userInput and i < 3:
+        print("Wrong password!")
+        i += 1
+        userInput = input("Enter password:")
+    if password == userInput: 
+        print("coreect! you may enter...")
+    else: 
+        print("Your out of chances")
+
+#v2()
+
+def main():
+    choice = int(input("Which version 1 or 2:"))
+    if choice == 1:
+        v1()
+    elif choice == 2:
+        v2()
+    else:
+        print("Invalid choice")
+      
+main()
+
